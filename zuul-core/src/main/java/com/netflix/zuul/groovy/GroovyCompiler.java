@@ -82,9 +82,7 @@ public class GroovyCompiler implements DynamicCodeCompiler {
     public static class UnitTest {
         @Test
         public void testLoadGroovyFromString() {
-
             GroovyCompiler compiler = spy(new GroovyCompiler());
-
             try {
 
                 String code = "class test { public String hello(){return \"hello\" } } ";
@@ -95,7 +93,6 @@ public class GroovyCompiler implements DynamicCodeCompiler {
                 Object[] args = {};
                 String s = (String) groovyObject.invokeMethod("hello", args);
                 assertEquals(s, "hello");
-
 
             } catch (Exception e) {
                 assertFalse(true);

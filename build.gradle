@@ -33,7 +33,9 @@ subprojects {
     apply plugin: 'nebula.provided-base'
 
     repositories {
-        jcenter()
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+//        jcenter()
     }
 
     group = "com.netflix.${githubProjectName}"
